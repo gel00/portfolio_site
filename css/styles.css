@@ -225,7 +225,7 @@ main {
   top: 0;
 }
 
-/*-----------skills------------*/
+/*-----------traits------------*/
 .trait_list .flex-container {
   background-image: url("../img/lg_bg.jpg");
   background-repeat: no-repeat;
@@ -255,4 +255,46 @@ main {
 }
 .trait_list .trait:nth-of-type(2n+1) {
   background: #111111;
+}
+
+/*-----------skills------------*/
+.skills h2 {
+  padding: 50px 0 0 0;
+  text-align: center;
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.skills .sub-heading {
+  padding: 0 0 20px 0;
+  text-align: center;
+  font-weight: 700;
+}
+.skills .grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.skills .skill__container {
+  padding: 20px;
+  background: #111111;
+  color: #fff;
+}
+.skills .skill__container h4 {
+  text-align: center;
+}
+.skills .skill__container p {
+  font-size: 12px;
+  font-weight: 200;
+}
+.skills .skill__container .skill__logo {
+  float: left;
+  height: 100%;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.skills .skill__container .skill__logo i {
+  font-size: 36px;
 }

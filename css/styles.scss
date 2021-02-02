@@ -5,7 +5,7 @@
   --tan: #D9CBBA;
   --darkBlue: #01062b;
 }
-
+$graymax: rgb(17, 17, 17);
 
 /* Box sizing rules */
 *,
@@ -105,6 +105,8 @@ font-family: -apple-system, BlinkMacSystemFont,
     sans-serif;
     font-size: 2vw;
 }
+
+
 
 .landing {
 
@@ -237,7 +239,7 @@ position: sticky;
 background: #fff;
 top: 0;
 }
-/*-----------skills------------*/
+/*-----------traits------------*/
 
 .trait_list {
   
@@ -274,5 +276,55 @@ top: 0;
 
   .trait:nth-of-type(2n+1) {
     background: rgb(17, 17, 17);
+  }
+}
+
+/*-----------skills------------*/
+
+.skills {
+  h2, {
+    padding: 50px 0 0 0;
+    text-align: center;
+    font-size: 72px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .sub-heading {
+    padding: 0  0 20px 0;
+    text-align: center;
+    font-weight: 700;
+
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .skill__container {
+    padding: 20px;
+    background: $graymax;
+    color: #fff;
+
+    h4 {
+      text-align: center;
+    }
+    
+    p {
+      font-size: 12px;
+      font-weight: 200;
+    }
+    .skill__logo {
+      float: left;
+      height: 100%;
+      padding-right: 20px;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 36px;
+      }
+    }
+    
   }
 }
