@@ -116,6 +116,8 @@ body {
   height: 100%;
   width: 100%;
   background-image: url("../img/lg_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   opacity: 0.1;
 }
 
@@ -258,18 +260,20 @@ main {
 }
 
 /*-----------skills------------*/
-.skills h2 {
+h2 {
   padding: 50px 0 0 0;
   text-align: center;
   font-size: 72px;
   text-transform: uppercase;
   font-weight: 700;
 }
-.skills .sub-heading {
+
+.sub-heading {
   padding: 0 0 20px 0;
   text-align: center;
   font-weight: 700;
 }
+
 .skills .grid-container {
   display: grid;
   grid-gap: 10px;
@@ -297,4 +301,83 @@ main {
 }
 .skills .skill__container .skill__logo i {
   font-size: 36px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+.container .preview {
+  position: relative;
+  padding: 25px 60px;
+}
+.container p {
+  font-size: 12px;
+}
+.container i {
+  margin: 10px 15px 0 15px;
+  font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+  .horizantal-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background: rgba(17, 17, 17, 0.3);
+  }
+
+  .project_work:nth-last-of-type(2n) .preview::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: -12px;
+    padding: 0;
+    height: 2px;
+    width: 72px;
+    background: #aaaaaa;
+  }
+
+  .project_work:nth-last-of-type(2n) .preview::after {
+    content: "";
+    position: absolute;
+    top: calc(25% - 6px);
+    right: -20px;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 2px solid #aaaaaa;
+    border-radius: 50%;
+  }
+
+  .project_work:nth-last-of-type(2n+1) .preview::before {
+    content: "";
+    position: absolute;
+    top: 35%;
+    left: -12px;
+    padding: 0;
+    height: 2px;
+    width: 72px;
+    background: #aaaaaa;
+  }
+
+  .project_work:nth-last-of-type(2n+1) .preview::after {
+    content: "";
+    position: absolute;
+    top: calc(35% - 6px);
+    left: -18px;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    border: 2px solid #aaaaaa;
+    border-radius: 50%;
+  }
+
+  .project_work:nth-of-type(2n) {
+    margin-top: 30px;
+  }
 }
