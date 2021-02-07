@@ -9,3 +9,12 @@ window.addEventListener("scroll", () => {
     }
     document.querySelector(".landing").style.opacity = opacity;
 });
+
+function navToggle() {
+  var x = document.getElementById("topNav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}

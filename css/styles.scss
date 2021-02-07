@@ -110,14 +110,47 @@ font-family: -apple-system, BlinkMacSystemFont,
 }
 
 
+.topnav .icon {
+  display: none;
+}
 
+@media screen and (max-width: 600px) {
+  .topnav li:not(:first-child) {display: none;}
+  .topnav .icon {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  .topnav.responsive li {
+    margin-right: 30px;
+    display: inline-block;
+    text-align: right;
+    
+  }
+  .topnav.responsive ul {
+    flex-direction: column ;
+  }
+  .topnav.responsive ul .hv:hover::after,
+nav li.active::after {
+  background: none;
+}
+}
 .landing {
 
 
 position:relative;
   height: 100%;
   background: var(--darkBlue);
-  .container {
+  .flex-container {
     height: 100%;
     padding-bottom: 8%;
     display: flex;
@@ -125,6 +158,7 @@ position:relative;
     justify-content: space-between;
     align-content: space-between;
   }
+ 
 }
 
 #particles-js {
@@ -155,6 +189,7 @@ z-index: 999;
 list-style-type: none;
 display: flex;
 justify-content: flex-end;
+
 }
 
 nav ul li {
@@ -162,7 +197,7 @@ margin: 0 10px;
 }
 
 nav ul li a {
-display: inline-block;
+display: block;
 color: #fff;
 text-decoration: none;
 text-transform: uppercase;
@@ -253,6 +288,7 @@ top: 0;
 }
 
 .scrollDown {
+ 
   i {
     font-size: 32px;
     display: block;
@@ -306,9 +342,9 @@ top: 0;
     text-align: center;
     padding: 30px 15px 50px 15px;
     
-    h2 {
-      font-size: 2.1em;
-      line-height: 1.7em;
+    h3 i {
+      font-size: 1.5em;
+     
     }
     h3 {
       font-size: 1.2em;
@@ -330,7 +366,7 @@ top: 0;
 
 /*-----------skills------------*/
 h2, {
-  padding: 50px 0 0 0;
+  padding: 40px 0 0 0;
   text-align: center;
   font-size: 72px;
   text-transform: uppercase;
@@ -362,6 +398,7 @@ h2, {
 
     h4 {
       text-align: center;
+      margin-bottom: 10px;;
     }
     
     p {
@@ -381,6 +418,8 @@ h2, {
     
   }
 }
+
+
 
 /*-------------Projects----------------------*/
 .container {
@@ -414,7 +453,6 @@ h2, {
 }
 }
 
-
 @media screen and (min-width: 768px) {
 
   .horizantal-line{
@@ -425,7 +463,9 @@ h2, {
     width: 2px;
     background:rgba(17, 17, 17,0.3);
   }
-  
+
+
+
   .col-md-6:first-of-type .project::before {
     content: "";
     position: absolute;
@@ -481,6 +521,16 @@ h2, {
     border-color: $darkred;
     background: $darkred;
   }
+}
+@media screen and (min-width: 768px) and (max-width:990px) {
+  .col-md-6:first-of-type .project {
+    margin: 10px 60px 30px 0;
+  }
+  
+  .col-md-6:last-of-type .project {
+    margin: 10px 0 30px 60px;
+  }
+  
 }
 
 /*-------------Contact----------------*/
@@ -630,4 +680,20 @@ h2, {
 }
 input:focus, textarea:focus {
   outline: -webkit-focus-ring-color none;
+}
+
+@media screen and (max-width: 1000px) {
+  .skills {
+    .skill__container .skill__logo {
+      height: auto;
+      padding-right: 10px;
+    }
+    h4{
+      font-size: 19px;
+      line-height: 36px;
+    }
+  }
+   h2 {
+    font-size: 48px; 
+    }
 }
