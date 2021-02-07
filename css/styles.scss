@@ -8,6 +8,7 @@
 $graymax: rgb(17, 17, 17);
 $darkRed: #1d1e83;
 $lightBlue: #2061c2;
+$darkred:  #D93E30;
 
 /* Box sizing rules */
 *,
@@ -276,15 +277,24 @@ top: 0;
   100% {opacity: 0;}
   
 }
+
+@media screen and (max-width:1500px) {
+  header {
+    font-size: 22px;
+  } 
+  
+}
+
 /*-----------traits------------*/
 
 .trait_list {
-  
-  .flex-container {
-    
-    background-image: url("../img/lg_bg.jpg");
+  background-image: url("../img/lg_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-size: 20px;
+  .flex-container {
+   
+    
   }
 
   .row {
@@ -308,6 +318,8 @@ top: 0;
     p{
       font-size: 0.7em;
       font-weight: 200;
+      max-width: 280px;
+      margin: 0 auto;
     }
   }
 
@@ -463,13 +475,159 @@ h2, {
 
   .col-md-6  .project:hover::before {
     height: 3px;
-    background: $lightBlue;
+    background: $darkred;
   }
   .col-md-6  .project:hover::after {
-    border-color: $lightBlue;
-    background:$lightBlue;
+    border-color: $darkred;
+    background: $darkred;
   }
 }
 
+/*-------------Contact----------------*/
 
 
+.contact-wrap{
+	width:100%;
+	margin:auto;
+	min-height:670px;
+	position:relative;
+	background:url(/img/lg_bg.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+  text-align: left;
+}
+.contact-html{
+	width:100%;
+	height:100%;
+	position:relative;
+	padding:90px 70px 50px 70px;
+	background:rgba(0, 0, 0, 0.9);
+}
+.contact-html .contact-htm,
+.contact-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:relative;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+
+}
+.contact-html .contact,
+.contact-html .sign-up,
+.contact-form .group .check{
+	display:none;
+}
+.contact-html h3,
+.contact-form .group .label,
+.contact-form .group .button{
+	text-transform:uppercase;
+}
+.contact-html h3{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+  color:#fff;
+	border-color:$darkred
+}
+
+.contact-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.contact-form .group{
+  width: 525px;
+  max-width: 100%;
+  margin: 0 auto;
+	margin-bottom:15px;
+}
+.contact-form .group .label,
+.contact-form .group .input,
+.contact-form .group .button{
+	width:100%;
+  max-width:525px;
+	color:#fff;
+	display:block;
+}
+.contact-form .group .input,
+.contact-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.contact-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.contact-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+.contact-form .group .button{
+	background:$darkred
+}
+.contact-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.contact-form .group label .icon:before,
+.contact-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.contact-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.contact-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.contact-form .group .check:checked + label{
+	color:#fff;
+}
+.contact-form .group .check:checked + label .icon{
+	background: $darkred
+}
+.contact-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.contact-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.contact-html .contact:checked + .tab + .sign-up + .tab + .contact-form .contact-htm{
+	transform:rotate(0);
+}
+.contact-html .sign-up:checked + .tab + .contact-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+  color :rgb(170, 170, 170);
+}
+input:focus, textarea:focus {
+  outline: -webkit-focus-ring-color none;
+}
