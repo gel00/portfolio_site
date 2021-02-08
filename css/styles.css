@@ -429,7 +429,7 @@ h2 {
   }
   .preview img {
     position: relative;
-    filter: blur(1px);
+    filter: blur(0.5px);
   }
   .preview img:hover {
     max-width: 150%;

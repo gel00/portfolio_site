@@ -488,7 +488,7 @@ h2, {
     overflow: hidden;
     img {
       position: relative;
-      filter: blur(1px);
+      filter: blur(0.5px);
     }
     img:hover {
       //transform:scale(0.5);
