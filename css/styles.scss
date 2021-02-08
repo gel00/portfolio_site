@@ -6,9 +6,9 @@
   --darkBlue: #01062b;
 }
 $graymax: rgb(17, 17, 17);
-$darkRed: #1d1e83;
+$darkBlue: #1d1e83;
 $lightBlue: #2061c2;
-$darkred:  #D93E30;
+$darkRed:  #D93E30;
 
 /* Box sizing rules */
 *,
@@ -17,32 +17,13 @@ $darkred:  #D93E30;
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
+
+
 
 /* Set core body defaults */
 body {
+  margin: 0;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -97,7 +78,7 @@ html {
 }
 body {
 margin: 0;
-font-family: -apple-system, BlinkMacSystemFont,
+font-family: 'Poppins', -apple-system, BlinkMacSystemFont,
     'Segoe UI',
     Roboto,
     Oxygen,
@@ -187,6 +168,9 @@ background-size: cover;
 opacity: 0.1;
 }
 
+nav {
+  flex-grow: 1;
+}
 
 nav ul{
 padding: 16px;
@@ -254,6 +238,7 @@ color: var(--darkRed);
 }
 
 header {
+  flex-grow: 1;
 display: grid;
 justify-content: center;
 align-content: center;
@@ -295,8 +280,13 @@ background: #fff;
 top: 0;
 }
 
+
+
+
+
 .scrollDown {
- 
+    flex-grow: 1;
+  padding-bottom: 30px;
   i {
     font-size: 32px;
     display: block;
@@ -406,7 +396,8 @@ h2, {
 
     h4 {
       text-align: center;
-      margin-bottom: 10px;;
+      margin-bottom: 10px;
+      
     }
     
     p {
@@ -426,7 +417,20 @@ h2, {
     
   }
 }
-
+@media screen and (max-width:586px) {
+  
+  .skills .skill__container {
+    .skill__logo {
+      justify-content: center;
+      float: none;
+      
+    }
+    border-radius: 5px;
+    h4, p {
+      display: none;
+    }
+  }
+}
 
 
 /*-------------Projects----------------------*/
@@ -438,16 +442,32 @@ h2, {
     margin: 10px 60px 30px 60px;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.151);
 
+    h4 {
+      i {
+        font-size: 0.5em;
+        transition: all 0.3s;
+        margin: 0;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        
+      }
+      a:hover {
+        color: $darkRed;
+        i {
+          font-size: 0.7em;
+          
+        }
+      }
+    }
+
+  
   
 
-  .preview {
-    position: relative;
-    padding: 0;
-    img {
-      position: relative;
-    }
+  .preview:hover {
     
-  } 
+  }
   p {
     font-size: 12px;
     padding: 6px;
@@ -462,6 +482,25 @@ h2, {
 }
 
 @media screen and (min-width: 768px) {
+  .preview {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+    img {
+      position: relative;
+      filter: blur(1px);
+    }
+    img:hover {
+      //transform:scale(0.5);
+      max-width: 150%;
+      transition: all 0.5s;
+      cursor: pointer;
+      filter: blur(0);
+    }
+   
+   
+  }
+
 
   .horizantal-line{
     position: absolute;
@@ -523,11 +562,11 @@ h2, {
 
   .col-md-6  .project:hover::before {
     height: 3px;
-    background: $darkred;
+    background: $darkRed;
   }
   .col-md-6  .project:hover::after {
-    border-color: $darkred;
-    background: $darkred;
+    border-color: $darkRed;
+    background: $darkRed;
   }
 }
 @media screen and (min-width: 768px) and (max-width:990px) {
@@ -589,7 +628,7 @@ h2, {
 	display:inline-block;
 	border-bottom:2px solid transparent;
   color:#fff;
-	border-color:$darkred
+	border-color:$darkRed
 }
 
 .contact-form{
@@ -597,9 +636,10 @@ h2, {
 	position:relative;
 	perspective:1000px;
 	transform-style:preserve-3d;
+  font-size: 16px;
 }
 .contact-form .group{
-  width: 525px;
+  width: 425px;
   max-width: 100%;
   margin: 0 auto;
 	margin-bottom:15px;
@@ -615,8 +655,8 @@ h2, {
 .contact-form .group .input,
 .contact-form .group .button{
 	border:none;
-	padding:15px 20px;
-	border-radius:25px;
+	padding:11px;
+	//border-radius:25px;
 	background:rgba(255,255,255,.1);
 }
 .contact-form .group input[data-type="password"]{
@@ -628,7 +668,7 @@ h2, {
 	font-size:12px;
 }
 .contact-form .group .button{
-	background:$darkred
+	background:$darkRed
 }
 .contact-form .group label .icon{
 	width:15px;
@@ -662,7 +702,7 @@ h2, {
 	color:#fff;
 }
 .contact-form .group .check:checked + label .icon{
-	background: $darkred
+	background: $darkRed
 }
 .contact-form .group .check:checked + label .icon:before{
 	transform:scale(1) rotate(45deg);

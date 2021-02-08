@@ -13,32 +13,9 @@
   box-sizing: border-box;
 }
 
-/* Remove default padding */
-ul[class],
-ol[class] {
-  padding: 0;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-ul[class],
-ol[class],
-li,
-figure,
-figcaption,
-blockquote,
-dl,
-dd {
-  margin: 0;
-}
-
 /* Set core body defaults */
 body {
+  margin: 0;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -91,7 +68,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 2vw;
 }
 
@@ -170,6 +147,10 @@ nav li.active::after {
   opacity: 0.1;
 }
 
+nav {
+  flex-grow: 1;
+}
+
 nav ul {
   padding: 16px;
   font-size: 16px;
@@ -238,6 +219,7 @@ nav ul li a:hover {
 }
 
 header {
+  flex-grow: 1;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -276,6 +258,10 @@ main {
   top: 0;
 }
 
+.scrollDown {
+  flex-grow: 1;
+  padding-bottom: 30px;
+}
 .scrollDown i {
   font-size: 32px;
   display: block;
@@ -388,6 +374,18 @@ h2 {
   font-size: 36px;
 }
 
+@media screen and (max-width: 586px) {
+  .skills .skill__container {
+    border-radius: 5px;
+  }
+  .skills .skill__container .skill__logo {
+    justify-content: center;
+    float: none;
+  }
+  .skills .skill__container h4, .skills .skill__container p {
+    display: none;
+  }
+}
 /*-------------Projects----------------------*/
 .container {
   position: relative;
@@ -398,12 +396,20 @@ h2 {
   margin: 10px 60px 30px 60px;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.151);
 }
-.container .project .preview {
-  position: relative;
-  padding: 0;
+.container .project h4 i {
+  font-size: 0.5em;
+  transition: all 0.3s;
+  margin: 0;
 }
-.container .project .preview img {
-  position: relative;
+.container .project h4 a {
+  color: #000;
+  text-decoration: none;
+}
+.container .project h4 a:hover {
+  color: #D93E30;
+}
+.container .project h4 a:hover i {
+  font-size: 0.7em;
 }
 .container .project p {
   font-size: 12px;
@@ -416,6 +422,22 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
+  .preview {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+  }
+  .preview img {
+    position: relative;
+    filter: blur(1px);
+  }
+  .preview img:hover {
+    max-width: 150%;
+    transition: all 0.5s;
+    cursor: pointer;
+    filter: blur(0);
+  }
+
   .horizantal-line {
     position: absolute;
     top: 0;
@@ -550,10 +572,11 @@ h2 {
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
+  font-size: 16px;
 }
 
 .contact-form .group {
-  width: 525px;
+  width: 425px;
   max-width: 100%;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -571,8 +594,7 @@ h2 {
 .contact-form .group .input,
 .contact-form .group .button {
   border: none;
-  padding: 15px 20px;
-  border-radius: 25px;
+  padding: 11px;
   background: rgba(255, 255, 255, 0.1);
 }
 
