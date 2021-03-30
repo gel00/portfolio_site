@@ -441,6 +441,11 @@ h2, {
     position: relative;
     margin: 10px 60px 30px 60px;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.151);
+    .fau {
+      height: 18px;
+      display: inline-block;
+      margin: 0;
+    }
 
     h4 {
       i {
@@ -460,6 +465,7 @@ h2, {
           
         }
       }
+      
     }
 
   
@@ -491,13 +497,12 @@ h2, {
       filter: blur(0.5px);
     }
     img:hover {
-      //transform:scale(0.5);
+      margin-left: -50px;
       max-width: 150%;
       transition: all 0.5s;
-      cursor: pointer;
+      cursor:zoom-in;
       filter: blur(0);
     }
-   
    
   }
 

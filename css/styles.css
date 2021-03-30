@@ -396,6 +396,11 @@ h2 {
   margin: 10px 60px 30px 60px;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.151);
 }
+.container .project .fau {
+  height: 18px;
+  display: inline-block;
+  margin: 0;
+}
 .container .project h4 i {
   font-size: 0.5em;
   transition: all 0.3s;
@@ -432,9 +437,10 @@ h2 {
     filter: blur(0.5px);
   }
   .preview img:hover {
+    margin-left: -50px;
     max-width: 150%;
     transition: all 0.5s;
-    cursor: pointer;
+    cursor: zoom-in;
     filter: blur(0);
   }
 
