@@ -125,8 +125,8 @@ nav li.active::after {
   padding-bottom: 8%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 #particles-js {
@@ -231,7 +231,7 @@ nav ul li a:hover {
 }
 
 header {
-  flex-grow: 1;
+  padding-top: 100px;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -270,10 +270,6 @@ main {
   top: 0;
 }
 
-.scrollDown {
-  flex-grow: 1;
-  padding-bottom: 30px;
-}
 .scrollDown i {
   font-size: 32px;
   display: block;
