@@ -1,8 +1,8 @@
 :root {
-  --white: #F2F2F2;
-  --darkRed: #D93E30;
-  --red: #F23535;
-  --tan: #D9CBBA;
+  --white: #f2f2f2;
+  --darkRed: #d93e30;
+  --red: #f23535;
+  --tan: #d9cbba;
   --darkBlue: #01062b;
 }
 
@@ -147,11 +147,23 @@ nav li.active::after {
   opacity: 0.1;
 }
 
+.topnav {
+  background-color: #111111;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s;
+}
+
 nav {
   flex-grow: 1;
 }
 
 nav ul {
+  width: 100%;
+  max-width: 786px;
+  margin: 0 auto;
   padding: 16px;
   font-size: 16px;
   position: relative;
@@ -203,7 +215,7 @@ nav ul li a:hover {
 
 .git {
   position: absolute;
-  top: 10px;
+  top: 3px;
   left: 20px;
   border: 3px solid #fff;
   padding: 0 10px;
@@ -325,7 +337,7 @@ main {
   max-width: 280px;
   margin: 0 auto;
 }
-.trait_list .trait:nth-of-type(2n+1) {
+.trait_list .trait:nth-of-type(2n + 1) {
   background: #111111;
 }
 
@@ -382,7 +394,8 @@ h2 {
     justify-content: center;
     float: none;
   }
-  .skills .skill__container h4, .skills .skill__container p {
+  .skills .skill__container h4,
+.skills .skill__container p {
     display: none;
   }
 }
@@ -411,7 +424,7 @@ h2 {
   text-decoration: none;
 }
 .container .project h4 a:hover {
-  color: #D93E30;
+  color: #d93e30;
 }
 .container .project h4 a:hover i {
   font-size: 0.7em;
@@ -503,12 +516,12 @@ h2 {
 
   .col-md-6 .project:hover::before {
     height: 3px;
-    background: #D93E30;
+    background: #d93e30;
   }
 
   .col-md-6 .project:hover::after {
-    border-color: #D93E30;
-    background: #D93E30;
+    border-color: #d93e30;
+    background: #d93e30;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
@@ -570,7 +583,7 @@ h2 {
   display: inline-block;
   border-bottom: 2px solid transparent;
   color: #fff;
-  border-color: #D93E30;
+  border-color: #d93e30;
 }
 
 .contact-form {
@@ -615,7 +628,7 @@ h2 {
 }
 
 .contact-form .group .button {
-  background: #D93E30;
+  background: #d93e30;
 }
 
 .contact-form .group label .icon {
@@ -655,7 +668,7 @@ h2 {
 }
 
 .contact-form .group .check:checked + label .icon {
-  background: #D93E30;
+  background: #d93e30;
 }
 
 .contact-form .group .check:checked + label .icon:before {
@@ -685,7 +698,8 @@ h2 {
   color: #aaaaaa;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: -webkit-focus-ring-color none;
 }
 
