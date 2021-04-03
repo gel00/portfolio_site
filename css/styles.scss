@@ -199,11 +199,12 @@ nav ul li a {
   height: 3px;
   width: 0;
   background: var(--red);
-  transition: none;
+  transition: width 300ms ease-out;
 }
 .hv {
   position: relative;
 }
+
 .hv:hover::after,
 nav li.active::after {
   width: 100%;
@@ -466,11 +467,11 @@ h2 {
     img {
       position: relative;
       filter: blur(0.5px);
+      transition: all 0.5s;
     }
     img:hover {
       margin-left: -50px;
       max-width: 150%;
-      transition: all 0.5s;
       cursor: zoom-in;
       filter: blur(0);
     }
